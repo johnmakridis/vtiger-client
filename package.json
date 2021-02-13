@@ -1,6 +1,7 @@
 {
   "name": "vtiger-client",
   "version": "1.0.1",
+  "private": false,
   "description": "VtigerCRM API Client",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -13,14 +14,18 @@
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
+  "author": "John Makridis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnmakridis/vtiger-client"
+  },
   "keywords": [
     "vtiger",
     "vtigercrm",
     "api",
     "vtiger api"
   ],
-  "author": "John Makridis",
-  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "crypto-js": "^4.0.0"
