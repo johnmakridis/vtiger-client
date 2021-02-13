@@ -19,7 +19,7 @@ class VtigerApiClient {
 
 
     /**
-    *Creates an instance of VtigerClient.
+    * Creates an instance of VtigerClient.
     * @param {string} url The URL for vtigercrm
     * @param {string} username Your vtigercrm username
     * @param {string} accessKey Your user accessKey (defined in user preferences page)
@@ -116,8 +116,8 @@ class VtigerApiClient {
 
 
     /**
-     * Create single entity record. 
-     * You are expected to send all the mandatory field value along with optional field for successful record creation. 
+     * Create single entity record.
+     * You are expected to send all the mandatory field value along with optional field for successful record creation.
      * Use describe() method to know more about the field mandatory configuration.
      *
      * @param {VtigerModule} module
@@ -144,7 +144,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
@@ -188,7 +188,7 @@ class VtigerApiClient {
 
 
     /**
-     * Update specific fields of existing record. 
+     * Update specific fields of existing record.
      * NOTE: Expects all the mandatory fields be re-stated as part of the data parameter.
      *
      * @param {VtigerModule} module
@@ -215,7 +215,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
@@ -251,7 +251,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
@@ -271,7 +271,7 @@ class VtigerApiClient {
      * @example select * | field_list | count(*)
         from module where conditions
         order by field_list limit m, n;
-    
+
         - field_list: should be comma-separated list of fieldname.
         - conditions can have expression having
         - - operators: <, >, <#, >#, #, !#
@@ -490,7 +490,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
@@ -510,10 +510,10 @@ class VtigerApiClient {
      * @param {VtigerModule} relatedModule
      * @param {number} relatedRecordId
      * @param {string} relationIdLabel
-     * @returns 
+     * @returns {Promise<VtigerResponse>}
      * @memberof VtigerClient
      */
-    async addRelated(sourceModule: VtigerModule, sourceRecordId: number, relatedModule: VtigerModule, relatedRecordId: number, relationIdLabel: string) {
+    async addRelated(sourceModule: VtigerModule, sourceRecordId: number, relatedModule: VtigerModule, relatedRecordId: number, relationIdLabel: string): Promise<VtigerResponse> {
 
         try {
 
@@ -533,7 +533,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
@@ -565,7 +565,7 @@ class VtigerApiClient {
                 }
             };
 
-            const response = await axios.post(this.webserviceUrl, params, config)
+            const response = await axios.post(this.webserviceUrl, params, config);
 
             return Promise.resolve(response.data);
 
