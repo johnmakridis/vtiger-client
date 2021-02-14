@@ -1,6 +1,6 @@
 {
   "name": "vtiger-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "VtigerCRM API Client",
   "main": "lib/index.js",
