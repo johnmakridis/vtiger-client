@@ -4,7 +4,7 @@ import { VtigerModule, VtigerResponse } from './types';
 
 
 
-class VtigerApiClient {
+export class VtigerApiClient {
     /**
      * session Id
      *
@@ -690,4 +690,4 @@ class VtigerApiClient {
 }
 
 
-module.exports = VtigerApiClient;
+// module.exports = VtigerApiClient;
